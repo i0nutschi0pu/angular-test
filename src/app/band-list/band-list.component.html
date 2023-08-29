@@ -1,0 +1,19 @@
+<div>
+    <table class="table" style=" border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let band of bands">
+                <td>{{ band.id }}</td>
+                <td>{{ band.name }}</td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-band-form (bandAdded)="appendBand($event)"></app-band-form>
